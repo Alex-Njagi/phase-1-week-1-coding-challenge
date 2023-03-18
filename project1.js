@@ -1,23 +1,21 @@
-let studentMarks;
+let studentMarks = window.prompt(`Input the student's marks`);
 let studentGrade;
 
-do {
-    let studentMarks = prompt(`Input the student's marks`);
-} while (studentMarks <0 || studentMarks >100)
-
-if (studentMarks>79){
+if (studentMarks <0 || studentMarks >100){
+    document.write(`Invalid marks; Refresh to try again`)
+} else if (studentMarks>79 && studentMarks<=100){
     let studentGrade = `A`;
-    console.log(`The student has scored an ${studentGrade}`);
+   document.write(`The student has scored an ${studentGrade}`);
 } else if (studentMarks>=60 && studentMarks<=79){
     let studentGrade = `B`;
-    console.log(`The student has scored a ${studentGrade}`);
+    document.write(`The student has scored a ${studentGrade}`);
 } else if (studentMarks>=49 && studentMarks<=59){
     let studentGrade = `C`;
-    console.log(`The student has scored a ${studentGrade}`);
+    document.write(`The student has scored a ${studentGrade}`);
 } else if (studentMarks>=40 && studentMarks<=49){
     let studentGrade = `D`;
-    console.log(`The student has scored a ${studentGrade}`);
-} else if (studentMarks<40){
+    document.write(`The student has scored a ${studentGrade}`);
+} else if (studentMarks>0 && studentMarks<40){
     let studentGrade = `E`;
-    console.log(`The student has scored a ${studentGrade}`);
+    document.write(`The student has scored a ${studentGrade}`);
 }
