@@ -54,9 +54,8 @@ let benefitsAsk = window.prompt(`Does the user have NHIF or NSSF or both?`);
         let benefitsAsk = `NHIF`;
     } else if (benefitsAsk === `NSSF`){                 //Validates whether the user has NSSF
         let benefitsAsk = `NSSF`;
-    } /*else if (benefitsAsk === `Both`){
-        let benefitsAsk = `Both`
-    }*/
+    }
+
 let NHIF;                                               //Assigns the NHIF value a variable
 let NSSF;                                               //Assigns the NSSF value a variable
 let totalBenefits;                                      //Assigns the user's benefits' value a variable
@@ -109,9 +108,7 @@ if (benefitsAsk === `NHIF`){
     NHIFCalculator(grossIncome=grossIncome);            //Invokes the NHIFCalculator function
 } else if (benefitsAsk === `NSSF`){
     NSSFCalculator(grossIncome=grossIncome);            //Invokes the NSSFCalculator function
-} /*else if (benefitsAsk === `Both`){
-    totalBenefits = NHIF+NSSF;
-}*/
+}
 
 let netSalary = grossIncome - incomeTax - totalBenefits;
 //Calculates the user's net income
